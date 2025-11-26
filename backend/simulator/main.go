@@ -13,7 +13,7 @@ import (
 
 func main() {
 	id := flag.String("id", "esp32-sim-1", "Device ID")
-	addr := flag.String("addr", "localhost:8080", "Server address")
+	addr := flag.String("addr", "localhost:80", "Server address")
 	flag.Parse()
 
 	u := url.URL{Scheme: "ws", Host: *addr, Path: "/ws/device", RawQuery: "id=" + *id}
